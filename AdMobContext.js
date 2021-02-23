@@ -18,17 +18,18 @@ import admob, {
   AdEventType,
 } from '@react-native-firebase/admob';
 
+// const newAndroidTestBannerId = 'ca-app-pub-6877747518488921/9008909524';
 const adUnitId = __DEV__
   ? TestIds.BANNER
   : Platform.OS === 'ios'
-  ? 'ca-app-pub-'
-  : 'ca-app-pub-';
+  ? 'ca-app-pub-6877747518488921/7325640266'
+  : 'ca-app-pub-6877747518488921/9568660228';
 
 const interstitialAdUnitId = __DEV__
   ? TestIds.INTERSTITIAL
   : Platform.OS === 'ios'
-  ? 'ca-app-pub-'
-  : 'ca-app-pub-';
+  ? 'ca-app-pub-6877747518488921~6266780865'
+  : 'ca-app-pub-6877747518488921~7133139977';
 
 const adBannerDefaultHeight = 70;
 
@@ -108,7 +109,7 @@ const AdMobProvider = ({children}: {|children: any|}) => {
             console.log('banner loaded');
           }}
           onAdFailedToLoad={async (error) => {
-            console.log('AdFailedToLoad', error);
+            console.log('AdFailedToLoad for adUnitId ', adUnitId, error);
             setAdBannerHeight(0);
           }}
         />
