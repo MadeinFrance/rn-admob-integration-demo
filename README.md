@@ -16,16 +16,3 @@
   </View>
 </AdMobProvider>
 ```
-
-## Android issue
-
-* Ad banner not showing. `AdFailedToLoad [Error: [admob/error-code-no-fill] The ad request was successful, but no ad was returned due to lack of ad inventory.]`
-* Interstitial not loading: `insterstitial not loaded`
-
-## iOS issue
-
-Ad banner works ✅ but interstitial is never loading in RELEASE mode
-
-<hr>
-
-See folders screenshots.
